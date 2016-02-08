@@ -1,0 +1,26 @@
+var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'gameDiv');
+
+var spacefield;
+
+var mainState = {
+	preload:function (){
+		game.load.image('starfield' , 'assets/starfield.png')
+
+	}
+
+	create:function (){
+		spacefield = game.add.tileSprite(0,0,800,600, 'starfield');
+
+
+	}
+
+	update: function(){
+
+		spacefield.tilePosition
+
+	}
+
+}
+
+game.state.add('mainState', mainState);
+game.state.start('mainState');
